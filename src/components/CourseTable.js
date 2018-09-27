@@ -39,10 +39,10 @@ class CourseTable extends React.Component {
                     paddingBottom: "5rem",
                     color: "black"
                 }}>
-                    <div className="table-active">
+                    <div className="table-active d-none d-md-block d-lg-block">
                         <div className=" d-flex pt-4 pb-2">
                             <div className="col-md-3">Title</div>
-                            <div className="col-md-3"><select className="form-control">
+                            <div className="col-md-3 "><select className="form-control">
                                 <option>Owned By</option>
                             </select></div>
                             <div className="col-md-2">Last modified by me</div>
