@@ -7,13 +7,33 @@ let courses = [
                 title: 'Week 1 of CS5200',
                 lessons: [
                     {
-                        title: 'Lesson 1'
+                        title: 'Lesson 1',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            },
+                            {
+                                title:'Topic 2'
+                            }
+                        ]
                     },
                     {
-                        title: 'Lesson 2'
+                        title: 'Lesson 2',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
+
+
                     },
                     {
-                        title: 'Lesson 3'
+                        title: 'Lesson 3',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     }
                 ]
             },
@@ -21,19 +41,30 @@ let courses = [
                 title: 'Week 2 of CS5200',
                 lessons: [
                     {
-                        title: 'Lesson A'
+                        title: 'Lesson A',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     },
                     {
-                        title: 'Lesson B'
+                        title: 'Lesson B',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     },
                     {
-                        title: 'Lesson C'
+                        title: 'Lesson C',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     }
                 ]
-            },
-            {
-                title: 'Week 3 of CS5200',
-                lessons: []
             }
         ]
     },
@@ -45,13 +76,28 @@ let courses = [
                 title: 'Week 1 of CS5610',
                 lessons: [
                     {
-                        title: 'Lesson 1'
+                        title: 'Lesson 1',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     },
                     {
-                        title: 'Lesson 2'
+                        title: 'Lesson 2',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     },
                     {
-                        title: 'Lesson 3'
+                        title: 'Lesson 3',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     }
                 ]
             },
@@ -59,13 +105,28 @@ let courses = [
                 title: 'Week 2 of CS5610',
                 lessons: [
                     {
-                        title: 'Lesson A'
+                        title: 'Lesson A',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     },
                     {
-                        title: 'Lesson B'
+                        title: 'Lesson B',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     },
                     {
-                        title: 'Lesson C'
+                        title: 'Lesson C',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     }
                 ]
             },
@@ -73,13 +134,28 @@ let courses = [
                 title: 'Week 3 of CS5610',
                 lessons: [
                     {
-                        title: 'Lesson A'
+                        title: 'Lesson A',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     },
                     {
-                        title: 'Lesson B'
+                        title: 'Lesson B',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     },
                     {
-                        title: 'Lesson C'
+                        title: 'Lesson C',
+                        topics:[
+                            {
+                                title:'Topic 1'
+                            }
+                        ]
                     }
                 ]
             }
