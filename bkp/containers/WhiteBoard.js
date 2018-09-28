@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import CourseCard from "./CourseCard";
-import ModuleList from "./ModuleList";
-import LessonTabs from "./LessonTabs";
-import CourseTable from "./CourseTable"
-import CourseGrid from "./CourseGrid"
+import CourseCard from "../components/CourseCard";
+import ModuleList from "../components/ModuleList";
+import LessonTabs from "../components/LessonTabs";
+import CourseTable from "../components/CourseTable"
+import CourseGrid from "../components/CourseGrid"
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
 
@@ -24,7 +24,7 @@ export default class WhiteBoard extends Component{
                         <Link to="/course/grid">Grid</Link>*/ }
                         <Route path="/course/table" component={CourseTable}/>
                         <Route path="/course/grid" component={CourseGrid}/>
-                        {/*<div className="card-deck">
+                        /*<div className="card-deck">
                             {
                                 this.props.courses.map(function (courses, index) {
                                     return <CourseCard

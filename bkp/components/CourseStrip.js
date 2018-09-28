@@ -19,7 +19,6 @@ export default class CourseStrip extends React.Component {
                 9/27/2018 5:00pm
             </div>
             <div className="col-md-2 d-none d-md-block d-lg-block">
-
             </div>
             <div className="col-md-2 ">
                 <i className="btn fa fa-times"></i>

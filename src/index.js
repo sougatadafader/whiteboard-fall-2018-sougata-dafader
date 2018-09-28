@@ -1,29 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import HelloWorld from './components/HelloWorld'
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
+import WhiteBoard from './containers/WhiteBoard'
 
-import CourseManager from './components/CourseManager';
-import WhiteBoard from './components/WhiteBoard';
-
-
-const courses=[
-    {
-        title: 'CS5200'
-    },
-    {
-        title: 'CS5610'
-    }
-
-]
 
 ReactDOM.render(
     <div className="container-fluid">
-        {/*<CourseManager/>*/ }
-        <WhiteBoard courses={courses}/>
+        <WhiteBoard/>
     </div>,
-    document.getElementById('root'));
-registerServiceWorker();
+    document.getElementById("root")
+)

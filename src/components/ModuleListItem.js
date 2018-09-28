@@ -1,16 +1,18 @@
 import React from 'react'
 
-const ModuleListItem = ({item, edit, deleteMod}) => {
-    return(
-        <li className="list-group-item">
-            {item.title}
-            <span className="float-right">
-                <i onClick={() => deleteMod(item.title)} className= "fa fa-trash mr-3"></i>
-                <i onClick={() => edit(item.title)} className="fa fa-pencil"></i>
-            </span>
+const ModuleListItem = ({module, deleteModule, selectModule, selected, editModule}) =>
 
-        </li>
-    )
-}
+    <li className={selected ? 'list-group-item active': 'list-group-item'} onClick={() => selectModule(module)}>
+        {module.title}
+        <button
+            onClick={() => editModule(module)}>
+            Edit
+        </button>
+        <button
+            onClick={() => deleteModule(module)}>
+            Delete
+        </button>
+    </li>
+
 
 export default ModuleListItem
