@@ -332,8 +332,8 @@ export default class CourseEditor extends Component {
         return(
             <div>
                 <div className="navbar navbar-dark fixed-top bg-primary">
-                <Link to={`/course/grid`} className="fa fa-2x fa-times text-dark"></Link>
-                <h2>
+                <Link to={`/course/grid`} className="fa fa-2x fa-times text-light"></Link>
+                <h2 className="text-light">
                     {this.state.course.title}
                     
                 </h2>
@@ -351,8 +351,8 @@ export default class CourseEditor extends Component {
                         
                     </div>
                     <div className="col-8">
-                        <input type="text" id="lesson-add" />
-                        <button className="btn btn-primary"  onClick={this.addLesson} id="lesson-add-btn">Add Lesson</button>
+                        <input type="text" id="lesson-add" className="btn border-dark"/>
+                        <button className="btn btn-primary m-1"  onClick={this.addLesson} id="lesson-add-btn">Add Lesson</button>
                         <LessonTabs
                             selectLesson={this.selectLesson}
                             selectedLesson={this.state.selectedLesson}

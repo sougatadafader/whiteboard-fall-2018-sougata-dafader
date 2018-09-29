@@ -4,7 +4,7 @@ let courses = [
         title: 'CS5200',
         modules: [
             {
-                title: 'Week 1 of CS5200',
+                title: 'Week 1',
                 lessons: [
                     {
                         title: 'Lesson 1',
@@ -38,7 +38,7 @@ let courses = [
                 ]
             },
             {
-                title: 'Week 2 of CS5200',
+                title: 'Week 2',
                 lessons: [
                     {
                         title: 'Lesson A',
@@ -73,7 +73,7 @@ let courses = [
         title: 'CS5610',
         modules: [
                     {
-                title: 'Week 1 of CS5610',
+                title: 'Week 1',
                 lessons: [
                     {
                         title: 'Lesson 1',
@@ -102,7 +102,7 @@ let courses = [
                 ]
             },
             {
-                title: 'Week 2 of CS5610',
+                title: 'Week 2',
                 lessons: [
                     {
                         title: 'Lesson A',
@@ -131,7 +131,7 @@ let courses = [
                 ]
             },
             {
-                title: 'Week 3 of CS5610',
+                title: 'Week 3',
                 lessons: [
                     {
                         title: 'Lesson A',

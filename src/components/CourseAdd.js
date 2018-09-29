@@ -22,7 +22,18 @@ export default class CourseAdd extends Component {
                     onClick={() => this.props.addCourse({
                         id: (new Date()).getTime() + '',
                         title: this.state.title,
-                        modules:[{'title': 'Module 1','lessons': [{'title': 'Lesson A'}]}]
+                        modules:[
+                            {
+                                'title': 'Module 1',
+                                'lessons': [
+                                    {
+                                        'title': 'Lesson A',
+                                        'topics': [
+                                            {
+                                                'title': 'Topic 1'
+                                            }
+                                        ]
+                                    }]}]
                     })}
                     className="btn btn-primary fa-2x fa fa-plus col-md-2 col-sm-3"></button>
             </div>

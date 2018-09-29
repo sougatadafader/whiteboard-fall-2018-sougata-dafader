@@ -5,13 +5,13 @@ const ModuleListItem = ({module, deleteModule, selectModule, selected, editModul
     <li className={selected ? 'list-group-item active': 'list-group-item'} onClick={() => selectModule(module)}>
         {module.title}
         <button
-            onClick={() => editModule(module)}>
-            Edit
+            onClick={() => deleteModule(module)} className="btn fa fa-trash ml-1 pull-right">
+
         </button>
         <button
-            onClick={() => deleteModule(module)}>
-            Delete
+            onClick={() => editModule(module)} className="btn fa fa-pencil pull-right">
         </button>
+
     </li>
 
 

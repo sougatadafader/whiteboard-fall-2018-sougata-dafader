@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import CourseCard from "../components/CourseCard";
-import ModuleList3 from "../components/ModuleList3";
 import CourseGrid from "../components/CourseGrid";
 import CourseTable from "../components/CourseTable";
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
@@ -48,8 +47,6 @@ export default class WhiteBoard extends Component {
                 
                 <Router>
                     <div className="mt-5 pt-4">
-                        <Link to="/course/table">Table</Link>
-                        <Link to="/course/grid">Grid</Link>
                         <Route path="/course/table"
                                render={() =>
                                     <div>
