@@ -4,7 +4,7 @@ import CourseGrid from "./CourseGrid";
 import CourseTable from "./CourseTable";
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import CourseService from "../services/CourseService";
-import CourseEditor from "../components/CourseEditor";
+import CourseEditor from "./CourseEditor";
 import CourseAdd from "../components/CourseAdd";
 import NavigationDefault from "../components/NavigationDefault";
 import NavigationTable from "../components/NavigationTable";
@@ -47,7 +47,7 @@ export default class WhiteBoard extends Component {
             <div>
                 
                 <Router>
-                    <div className="mt-5 pt-4">
+                    <div className="mt-5 pt-3">
                         <Route path="/course/table"
                                render={() =>
                                     <div>

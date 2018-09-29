@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import ModuleList from "./ModuleList";
+import ModuleList from "../components/ModuleList";
 import {Route} from 'react-router-dom'
-import LessonTabs from "./LessonTabs";
+import LessonTabs from "../components/LessonTabs";
 import {Link} from 'react-router-dom'
-import TopicPills from "./TopicPills";
+import TopicPills from "../components/TopicPills";
 
 export default class CourseEditor extends Component {
     constructor(props) {
@@ -61,7 +61,12 @@ export default class CourseEditor extends Component {
             }
         }
         if(!isLessonEdit) {
-            let lessonObj = {title: lessonName}
+            let lessonObj = {title: lessonName,
+                topics:[
+                    {
+                        title:'New Topic'
+                    }
+                ]}
             course.modules[ptr].lessons.push(lessonObj)
         }
         else
@@ -115,7 +120,12 @@ export default class CourseEditor extends Component {
             title:moduleName,
             lessons:[
                 {
-                    title:'New Lesson'
+                    title:'New Lesson',
+                    topics:[
+                        {
+                            title:'New Topic'
+                        }
+                    ]
                 }
             ]
         }
