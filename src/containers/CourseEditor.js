@@ -237,6 +237,15 @@ export default class CourseEditor extends Component {
         )
         document.getElementById('topic-add-btn').innerHTML = 'Update Topic'
     }
+    selectTopic =(topic) =>
+    {
+        this.setState(
+            {
+                selectedTopic:topic
+            }
+        )
+
+    }
     deleteTopic = (topic) =>
     {
         let course = this.state.course
@@ -377,6 +386,7 @@ export default class CourseEditor extends Component {
                             topics={this.state.selectedLesson.topics}
                             editTopic={this.editTopic}
                             addTopic = {this.addTopic}
+                            selectTopic = {this.selectTopic}
                         />
                     </div>
                 </div>

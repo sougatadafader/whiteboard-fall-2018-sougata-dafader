@@ -13,6 +13,7 @@ const TopicPills = ({topics, selectTopic, selectedTopic,deleteTopic,editTopic,ad
                     deleteTopic={deleteTopic}
                     editTopic={editTopic}
                     topic={topic}
+                    selectTopic = {selectTopic}
                     key={index}/>
             )
         }

@@ -174,6 +174,12 @@ export default class CourseService {
             course => course.id === courseId
         )
     
+    updateCourse = (courseId , course) => {
+        courses = courses.filter(
+            course => course.id === courseId
+        )
+        courses = course
+    }
 
     deleteCourse = courseId =>
         courses = courses.filter(
