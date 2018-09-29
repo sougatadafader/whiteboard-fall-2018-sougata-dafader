@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import CourseAdd from "./CourseAdd";
 
 
-const NavDefault = ({addCourse}) =>
+const NavigationDefault = ({addCourse}) =>
     <nav className="navbar navbar-dark fixed-top bg-primary">
                     <div className="container-fluid">
                         <div className="col-md-2 col-sm-3">
@@ -24,4 +24,4 @@ const NavDefault = ({addCourse}) =>
                     </div>
                 </nav>
 
-export default NavDefault
+export default NavigationDefault

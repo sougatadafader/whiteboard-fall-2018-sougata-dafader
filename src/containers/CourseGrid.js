@@ -1,10 +1,10 @@
 import React from 'react'
-import CourseCard from "./CourseCard";
+import CourseCard from "../components/CourseCard";
 
 
 const CourseGrid = ({courses, deleteCourse, addCourse}) =>
     <div className="container mt-5">
-        <div className="card-columns">
+        <div className="container row">
         {
                 courses.map((course, index) =>
                     (<CourseCard

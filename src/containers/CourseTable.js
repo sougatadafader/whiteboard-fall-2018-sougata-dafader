@@ -1,6 +1,6 @@
 import React from 'react'
-import CourseRow from "./CourseRow";
-import CourseAdd from "./CourseAdd";
+import CourseRow from "../components/CourseRow";
+import CourseAdd from "../components/CourseAdd";
 
 const CourseTable = ({courses, deleteCourse, addCourse}) =>
     <div>

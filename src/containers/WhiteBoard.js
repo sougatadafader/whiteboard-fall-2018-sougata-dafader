@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
 import CourseCard from "../components/CourseCard";
-import CourseGrid from "../components/CourseGrid";
-import CourseTable from "../components/CourseTable";
+import CourseGrid from "./CourseGrid";
+import CourseTable from "./CourseTable";
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import CourseService from "../services/CourseService";
 import CourseEditor from "../components/CourseEditor";
 import CourseAdd from "../components/CourseAdd";
-import NavDefault from "../components/NavDefault";
-import NavTable from "../components/NavTable";
-import NavGrid from "../components/NavGrid";
+import NavigationDefault from "../components/NavigationDefault";
+import NavigationTable from "../components/NavigationTable";
+import NavigationGrid from "../components/NavigationGrid";
 
 export default class WhiteBoard extends Component {
 
@@ -19,6 +19,7 @@ export default class WhiteBoard extends Component {
             courses: this.courseService.findAllCourses()
         }
     }
+
     addCourse = newCourse => {
         this.courseService.createCourse(newCourse)
         this.setState({
@@ -50,8 +51,8 @@ export default class WhiteBoard extends Component {
                         <Route path="/course/table"
                                render={() =>
                                     <div>
-                                   <NavDefault addCourse={this.addCourse}/>
-                                   <NavTable/>
+                                   <NavigationDefault addCourse={this.addCourse}/>
+                                   <NavigationTable/>
                                     <CourseTable
                                        addCourse={this.addCourse}
                                        deleteCourse={this.deleteCourse}
@@ -62,8 +63,8 @@ export default class WhiteBoard extends Component {
 
                                 render={() =>
                                 <div>
-                                    <NavDefault addCourse={this.addCourse}/>
-                                    <NavGrid/>
+                                    <NavigationDefault addCourse={this.addCourse}/>
+                                    <NavigationGrid/>
                                     <CourseGrid addCourse={this.addCourse}
                                        deleteCourse={this.deleteCourse}
                                        courses={this.state.courses}/>
