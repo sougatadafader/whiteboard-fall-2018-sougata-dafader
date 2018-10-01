@@ -9,7 +9,7 @@ export default class CourseAdd extends Component {
     }
     updateForm = event =>
         this.setState({
-            title: event.target.value
+            title: 'New Course'
         })
 
     render() {
