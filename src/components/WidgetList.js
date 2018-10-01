@@ -62,6 +62,110 @@ const WidgetList = () =>
                         <h2>PREVIEW</h2>
                         <div className="heading-preview"></div>
                     </div>
+                    <hr/>
+                    <div className="widgu p-3" id="image-{{guid}}">
+                        <div className="form-group row">
+                            <label htmlFor="itext-{{guid}}" className="col-sm-2 col-form-label">
+                                Image Url</label>
+                            <div className="col-sm-10">
+                                <input className="form-control" className="head-text" id="itext-{{guid}}"
+                                       placeholder="www.abc.xyz" type="url" required data-preview="iprev-{{guid}}"/>
+                            </div>
+                        </div>
+                        <div className="form-group row">
+                            <label htmlFor="img_widname" className="col-sm-2 col-form-label">
+                                Widget Name</label>
+                            <div className="col-sm-10">
+                                <input className="form-control" id="img_widname" placeholder="Widget Name" required/>
+                            </div>
+                        </div>
+                        <h2>PREVIEW</h2>
+                        <img src="" id="iprev-{{guid}}" className="heading-preview img-responsive" alt="Image"/>
+                    </div>
+                    <hr/>
+                    <div className="widgu p-3" id="paragraph-{{guid}}">
+                        <div className="form-group row">
+                            <label htmlFor="ptext-{{guid}}" className="col-sm-2 col-form-label">
+                                Paragraph Text</label>
+                            <div className="col-sm-10">
+                                <textarea className="form-control" className="head-text" id="ptext-{{guid}}"
+                                          placeholder="Some Paragraph" required
+                                          data-preview="pprev-{{guid}}"></textarea>
+                            </div>
+                        </div>
+
+                        <div className="form-group row">
+                            <label htmlFor="para_widname" className="col-sm-2 col-form-label">
+                                Widget Name</label>
+                            <div className="col-sm-10">
+                                <input className="form-control" id="para_widname" placeholder="Widget Name" required/>
+                            </div>
+                        </div>
+                        <h2>PREVIEW</h2>
+                        <p className="heading-preview" id="pprev-{{guid}}"></p>
+                    </div>
+                    <hr/>
+                    <div className="widgu p-3" id="link-{{guid}}">
+                        <div className="form-group row">
+                            <label htmlFor="linkurl-{{guid}}" className="col-sm-2 col-form-label">
+                                Link URL</label>
+                            <div className="col-sm-10">
+                                <input className="form-control" type="url" className="head-text" id="linkurl-{{guid}}"
+                                       placeholder="Some Link" value="#" required data-preview="linkprev-{{guid}}"/>
+                            </div>
+                        </div>
+                        <div className="form-group row">
+                            <label htmlFor="linktext-{{guid}}" className="col-sm-2 col-form-label">
+                                Link Text</label>
+                            <div className="col-sm-10">
+                                <input className="form-control" type="text" className="head-text" id="linktext-{{guid}}"
+                                       placeholder="Some Link" value="Link Text" required
+                                       data-preview="linkprev-{{guid}}"/>
+                            </div>
+                        </div>
+
+                        <div className="form-group row">
+                            <label htmlFor="link_widname" className="col-sm-2 col-form-label">
+                                Widget Name</label>
+                            <div className="col-sm-10">
+                                <input className="form-control" id="link_widname" placeholder="Widget Name" required/>
+                            </div>
+                        </div>
+                        <h2>PREVIEW</h2>
+                        <a className="heading-preview" id="linkprev-{{guid}}"></a>
+                    </div>
+                    <hr/>
+                    <div className="widgu  p-3" id="list-{{guid}}">
+                        <div className="form-group row">
+                            <label htmlFor="username" className="col-sm-2 col-form-label">
+                                List Text</label>
+                            <div className="col-sm-10">
+                                <textarea className="form-control" className="head-text" id="ltext-{{guid}}"
+                                          placeholder="List placeholder" required
+                                          data-preview="lprev-{{guid}}"></textarea>
+                            </div>
+                        </div>
+                        <div className="form-group row">
+                            <label htmlFor="username" className="col-sm-2 col-form-label">
+                                List type</label>
+                            <div className="col-sm-10">
+                                <select className="form-control" required data-preview="lprev-{{guid}}"
+                                        id="ltype-{{guid}}">
+                                    <option value="ul">Unordered List</option>
+                                    <option value="ol">Ordered List</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div className="form-group row">
+                            <label htmlFor="list_widname" className="col-sm-2 col-form-label">
+                                Widget Name</label>
+                            <div className="col-sm-10">
+                                <input className="form-control" id="list_widname" placeholder="Widget Name" required/>
+                            </div>
+                        </div>
+                        <h2>PREVIEW</h2>
+                        <div className="heading-preview" id="lprev-{{guid}}"></div>
+                    </div>
 
                 </div>
             </div>

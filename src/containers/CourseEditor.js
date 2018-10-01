@@ -155,6 +155,7 @@ export default class CourseEditor extends Component {
             this.setState({
                 isEdit:false
             })
+            document.getElementById('module-add-btn').innerHTML = 'Add'
         }
         this.setState(
             {
@@ -178,6 +179,7 @@ export default class CourseEditor extends Component {
                 isEdit:true
             }
         )
+        document.getElementById('module-add-btn').innerHTML = 'Update'
     }
     deleteLesson = (lesson) =>
     {

@@ -5,7 +5,7 @@ const ModuleList = ({modules, deleteModule, selectModule, selectedModule,changeM
         <ul className="list-group">
                         <li className="list-group-item">
                             <input type="text" id="module-add" className="col-sm-9" />
-                            <button className="col-sm-2 btn btn-primary fa fa-plus ml-2  mb-1" onClick={()=>addModule()}></button>
+                            <button className="col-sm-3 btn btn-primary mb-1" id="module-add-btn" onClick={()=>addModule()}>Add</button>
                         </li>
         {
             modules.map((module, index) =>
