@@ -17,6 +17,7 @@ export default class CourseAdd extends Component {
             <div className="row">
                 <input
                     onChange={this.updateForm}
+                    id="Course-input"
                     className="form-control col-md-10 col-sm-6 col-9 mt-1"/>
                 <button
                     onClick={() => this.props.addCourse({

@@ -25,6 +25,7 @@ export default class WhiteBoard extends Component {
         this.setState({
             courses: this.courseService.findAllCourses()
         })
+        document.getElementById('Course-input').value =''
     }
 
     deleteCourse = courseToDelete => {
