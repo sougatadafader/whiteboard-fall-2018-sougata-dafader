@@ -1,13 +1,26 @@
 import React from 'react'
-import styles from '../components/WidgetList.style.css';
-import LinkWidget from "../components/LinkWidget";
-import HeadingWidget from "../components/HeadingWidget";
-import ListWidget from "../components/ListWidget";
-import ImageWidget from "../components/ImageWidget";
-import ParagraphWidget from "../components/ParagraphWidget";
+import styles from './WidgetList.style.css';
+import LinkWidget from "./LinkWidget";
+import HeadingWidget from "./HeadingWidget";
+import ListWidget from "./ListWidget";
+import ImageWidget from "./ImageWidget";
+import ParagraphWidget from "./ParagraphWidget";
 
-const WidgetList = () =>
-    <div className="topic-widgets" id="topic-widgets">
+const WidgetList = ({widgets}) =>
+
+
+        <ul className="list-group">
+            {
+                widgets.map((widget, index) =>
+                    <li key={index} className="list-group-item">
+                        {widget.title}
+                    </li>
+                )
+            }
+        </ul>
+
+        {/*Widget
+         <div className="topic-widgets" id="topic-widgets">
         <div className="row">
             <div className="col">
                 <label className="float-right ">
@@ -27,9 +40,8 @@ const WidgetList = () =>
         <LinkWidget/>
         <ImageWidget/>
         <button className="btn btn-danger pull-right m-4" id="add-widget"><i className="fa fa-plus"></i></button>
-
-
-
+        </div>
+        */}
         {/*
         <div className="styles.widget-container">
             <div className="styles.widgets">
@@ -200,6 +212,6 @@ const WidgetList = () =>
             </div>
             <button className="btn btn-danger" id="add-widget"><i className="fa fa-plus"></i></button>
         </div> */}
-    </div>
+
 
 export default WidgetList

@@ -4,6 +4,7 @@ import {Route} from 'react-router-dom'
 import LessonTabs from "../components/LessonTabs";
 import {Link} from 'react-router-dom'
 import TopicPills from "../components/TopicPills";
+import WidgetList from "../components/WidgetList";
 
 export default class CourseEditor extends Component {
     constructor(props) {
@@ -390,6 +391,10 @@ export default class CourseEditor extends Component {
                             addTopic = {this.addTopic}
                             selectTopic = {this.selectTopic}
                         />
+                        <br/>
+                        <WidgetList widgets={[
+                            {title: 'w1'},{title: 'w2'},{title: 'w3'}
+                        ]}/>
                     </div>
                 </div>
             </div>
