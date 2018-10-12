@@ -8,19 +8,21 @@ import ParagraphWidget from "./ParagraphWidget";
 
 const WidgetList = ({widgets}) =>
 
-
+    <div className="topic-widgets" id="topic-widgets">
         <ul className="list-group">
             {
+
                 widgets.map((widget, index) =>
                     <li key={index} className="list-group-item">
-                        {widget.title}
+                        {widget.id}
                     </li>
                 )
             }
         </ul>
-
+        <button className="btn btn-danger pull-right m-4" id="add-widget"><i className="fa fa-plus"></i></button>
+    </div>
         {/*Widget
-         <div className="topic-widgets" id="topic-widgets">
+
         <div className="row">
             <div className="col">
                 <label className="float-right ">
@@ -39,8 +41,8 @@ const WidgetList = ({widgets}) =>
         <ListWidget/>
         <LinkWidget/>
         <ImageWidget/>
-        <button className="btn btn-danger pull-right m-4" id="add-widget"><i className="fa fa-plus"></i></button>
-        </div>
+
+
         */}
         {/*
         <div className="styles.widget-container">

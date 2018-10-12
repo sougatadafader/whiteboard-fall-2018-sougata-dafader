@@ -78,7 +78,9 @@ export default class WhiteBoard extends Component {
                                 <CourseEditor
                                     {...props}
                                     deleteModule={this.deleteModule}
-                                    courses={this.state.courses}/>}
+                                    courses={this.state.courses}
+                                    findWidgetsForTopic ={this.courseService.findWidgetsForTopic}
+                                />}
                             path="/course/:courseId/edit"/>
                     </div>
                 </Router>

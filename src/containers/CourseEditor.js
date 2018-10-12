@@ -392,9 +392,7 @@ export default class CourseEditor extends Component {
                             selectTopic = {this.selectTopic}
                         />
                         <br/>
-                        <WidgetList widgets={[
-                            {title: 'w1'},{title: 'w2'},{title: 'w3'}
-                        ]}/>
+                        <WidgetList widgets={this.props.findWidgetsForTopic(this.state.selectedTopic)}/>
                     </div>
                 </div>
             </div>
