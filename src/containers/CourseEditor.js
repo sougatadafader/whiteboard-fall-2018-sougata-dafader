@@ -118,13 +118,22 @@ export default class CourseEditor extends Component {
             moduleName = modInput
         }
         let modObj = {
+
+            id: (new Date()).getTime() + '_module',
             title:moduleName,
             lessons:[
                 {
                     title:'New Lesson',
                     topics:[
                         {
-                            title:'New Topic'
+                            id: (new Date()).getTime() + '_topic',
+                            title:'New Topic',
+                            widgets:[{
+                                id: (new Date()).getTime() + '_wid',
+                                type: "HEADING",
+                                size: 1,
+                                text: "The Document Object Model"
+                            }]
                         }
                     ]
                 }
@@ -297,7 +306,7 @@ export default class CourseEditor extends Component {
         let modPtr = 0
         for(let m in modules)
         {
-            if(modules[m].title == selectedModule.title)
+            if(modules[m].id == selectedModule.id)
             {
                 modPtr = m
                 break
@@ -318,7 +327,15 @@ export default class CourseEditor extends Component {
         topicName=topicInp
         let isTopicEdit = this.state.isTopicEdit
         if(!isTopicEdit) {
-            let topicObj = {title: topicName}
+            let topicObj = {
+                    id: (new Date()).getTime() + '_topic',
+                    title: topicName,
+                widgets:[{
+                    id: (new Date()).getTime() + '_wid',
+                    type: "HEADING",
+                    size: 1,
+                    text: "The Document Object Model"
+                }]}
             course.modules[modPtr].lessons[lessonPtr].topics.push(topicObj)
         }
         else
@@ -390,9 +407,12 @@ export default class CourseEditor extends Component {
                             editTopic={this.editTopic}
                             addTopic = {this.addTopic}
                             selectTopic = {this.selectTopic}
+                            findWidgets = {this.props.findWidgets}
                         />
                         <br/>
-                        <WidgetList widgets={this.props.findWidgetsForTopic(this.state.selectedTopic)}/>
+                        {/*<WidgetList widgets={this.props.findWidgets(this.state.selectedTopic)}
+                                    createWidget = {this.props.createWidget}
+                        />*/ }
                     </div>
                 </div>
             </div>

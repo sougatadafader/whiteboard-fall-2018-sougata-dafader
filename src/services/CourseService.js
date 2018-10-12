@@ -4,6 +4,7 @@ let courses = [
         title: 'CS5200',
         modules: [
             {
+                id: '123_module',
                 title: 'Week 1',
                 lessons: [
                     {
@@ -256,6 +257,7 @@ let courses = [
                 ]
             },
             {
+                id: '234_module',
                 title: 'Week 2',
                 lessons: [
                     {
@@ -381,6 +383,7 @@ let courses = [
         title: 'CS5610',
         modules: [
             {
+                id: '345_module',
                 title: 'Week 1',
                 lessons: [
                     {
@@ -528,6 +531,7 @@ let courses = [
                 ]
             },
             {
+                id: '456_module',
                 title: "Week 2",
                 lessons: [
                     {
@@ -604,13 +608,42 @@ export default class CourseService {
             return course;
         })
     }
-    findWidgetsForTopic = forTopic => {
+    createWidget = (topicId, widget) => {
         for(let c in courses) {
             for(let m in courses[c].modules) {
                 for(let l in courses[c].modules[m].lessons) {
                     for(let t in courses[c].modules[m].lessons[l].topics) {
-                        if(courses[c].modules[m].lessons[l].topics[t].id === forTopic.id) {
+                        if(courses[c].modules[m].lessons[l].topics[t].id === topicId.id) {
+                            courses[c].modules[m].lessons[l].topics[t].widgets.push(widget)
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    findWidgets = topicId => {
+        for(let c in courses) {
+            for(let m in courses[c].modules) {
+                for(let l in courses[c].modules[m].lessons) {
+                    for(let t in courses[c].modules[m].lessons[l].topics) {
+                        if(courses[c].modules[m].lessons[l].topics[t].id === topicId.id) {
                             return courses[c].modules[m].lessons[l].topics[t].widgets
+                        }
+                    }
+                }
+            }
+        }
+    }
+    findWidget = widgetId => {
+        for(let c in courses) {
+            for(let m in courses[c].modules) {
+                for(let l in courses[c].modules[m].lessons) {
+                    for(let t in courses[c].modules[m].lessons[l].topics) {
+                        for(let to in courses[c].modules[m].lessons[l].topics[t].widgets) {
+                            if (courses[c].modules[m].lessons[l].topics[t].widgets[to].id === widgetId) {
+                                return courses[c].modules[m].lessons[l].topics[t].widgets[to]
+                            }
                         }
                     }
                 }

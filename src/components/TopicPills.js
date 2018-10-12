@@ -2,7 +2,7 @@ import React from 'react'
 import TopicPill from "./TopicPill";
 import WidgetList from "./WidgetList";
 import Heading from "./WidgetList";
-const TopicPills = ({topics, selectTopic, selectedTopic,deleteTopic,editTopic,addTopic}) =>
+const TopicPills = ({topics, selectTopic, selectedTopic,deleteTopic,editTopic,addTopic, findWidgets,createWidget}) =>
     <div className="topics mt-4">
         <ul className="nav nav-pills">
         {
@@ -22,7 +22,8 @@ const TopicPills = ({topics, selectTopic, selectedTopic,deleteTopic,editTopic,ad
             <button className="btn btn-primary" id="topic-add-btn" onClick={() => addTopic()}>Add Topic</button>
         </li>
         </ul>
-
+        <WidgetList widgets={findWidgets(selectedTopic)}
+                    createWidget = {createWidget}/>
     </div>
 
 export default TopicPills

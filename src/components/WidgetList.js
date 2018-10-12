@@ -11,7 +11,6 @@ const WidgetList = ({widgets}) =>
     <div className="topic-widgets" id="topic-widgets">
         <ul className="list-group">
             {
-
                 widgets.map((widget, index) =>
                     <li key={index} className="list-group-item">
                         {widget.id}

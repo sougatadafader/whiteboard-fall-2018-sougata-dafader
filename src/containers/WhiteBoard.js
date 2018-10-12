@@ -79,7 +79,8 @@ export default class WhiteBoard extends Component {
                                     {...props}
                                     deleteModule={this.deleteModule}
                                     courses={this.state.courses}
-                                    findWidgetsForTopic ={this.courseService.findWidgetsForTopic}
+                                    findWidgets ={this.courseService.findWidgets}
+                                    createWidget = {this.courseService.createWidget}
                                 />}
                             path="/course/:courseId/edit"/>
                     </div>
