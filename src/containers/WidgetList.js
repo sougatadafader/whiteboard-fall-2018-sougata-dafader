@@ -1,13 +1,26 @@
 import React from 'react'
-import styles from './WidgetList.style.css';
-import LinkWidget from "./LinkWidget";
-import HeadingWidget from "./HeadingWidget";
-import ListWidget from "./ListWidget";
-import ImageWidget from "./ImageWidget";
-import ParagraphWidget from "./ParagraphWidget";
+import styles from '../components/WidgetList.style.css';
+import LinkWidget from "../components/LinkWidget";
+import HeadingWidget from "../components/HeadingWidget";
+import ListWidget from "../components/ListWidget";
+import ImageWidget from "../components/ImageWidget";
+import ParagraphWidget from "../components/ParagraphWidget";
 
 const WidgetList = () =>
     <div className="topic-widgets" id="topic-widgets">
+        <div className="row">
+            <div className="col">
+                <label className="float-right ">
+                    <span className="text-dark pr-2" style={{fontSize:"x-large"}} >Preview</span>
+                    <div className="btn border-dark float-right mr-2">
+                        Toggle
+                    </div>
+                </label>
+                <button className="float-right btn btn-primary mr-3 " title="Save">
+                    Save
+                </button>
+            </div>
+        </div>
         <HeadingWidget/>
         <ParagraphWidget/>
         <ListWidget/>

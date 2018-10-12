@@ -1,7 +1,7 @@
 import React from 'react'
 import TopicPill from "./TopicPill";
-import WidgetList from "./WidgetList";
-import Heading from "./WidgetList";
+import WidgetList from "../containers/WidgetList";
+import Heading from "../containers/WidgetList";
 const TopicPills = ({topics, selectTopic, selectedTopic,deleteTopic,editTopic,addTopic}) =>
     <div className="topics mt-4">
         <ul className="nav nav-pills">
