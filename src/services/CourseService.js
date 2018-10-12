@@ -8,6 +8,7 @@ let courses = [
                 title: 'Week 1',
                 lessons: [
                     {
+                        id: '123_lessons',
                         title: 'Lesson 1',
                         topics: [
                             {
@@ -80,6 +81,7 @@ let courses = [
                         ]
                     },
                     {
+                        id: '234_lessons',
                         title: 'Lesson 2',
                         topics: [
                             {
@@ -184,6 +186,7 @@ let courses = [
                         ]
                     },
                     {
+                        id: '345_lessons',
                         title: 'Lesson 3',
                         topics: [
                             {
@@ -261,6 +264,7 @@ let courses = [
                 title: 'Week 2',
                 lessons: [
                     {
+                        id: '456_lessons',
                         title: 'Lesson A',
                         topics: [
                             {
@@ -299,6 +303,7 @@ let courses = [
                         ]
                     },
                     {
+                        id: '567_lessons',
                         title: 'Lesson B',
                         topics: [
                             {
@@ -337,6 +342,7 @@ let courses = [
                         ]
                     },
                     {
+                        id: '678_lessons',
                         title: 'Lesson C',
                         topics: [
                             {
@@ -387,6 +393,7 @@ let courses = [
                 title: 'Week 1',
                 lessons: [
                     {
+                        id: '789_lessons',
                         title: 'HTML',
                         topics: [
                             {
@@ -491,6 +498,7 @@ let courses = [
                         ]
                     },
                     {
+                        id: '890_lessons',
                         title: "CSS",
                         topics: [
                             {
@@ -535,6 +543,7 @@ let courses = [
                 title: "Week 2",
                 lessons: [
                     {
+                        id: '012_lessons',
                         title: "JavaScript",
                         topics: [
                             {

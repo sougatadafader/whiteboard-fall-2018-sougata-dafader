@@ -31,9 +31,9 @@ export default class CourseEditor extends Component {
             selectedModule: selectedModule,
             selectedLesson: selectedLesson,
             selectedTopic:selectedTopic,
-            selectedModuleTitle:'',
-            selectedLessonTitle:'',
-            selectedTopicTitle:'',
+            selectedModuleId:'',
+            selectedLessonId:'',
+            selectedTopicId:'',
             isEdit:false,
             isLessonEdit:false,
             isTopicEdit:false
@@ -50,22 +50,32 @@ export default class CourseEditor extends Component {
         }
         let course = this.state.course
         let modules = course.modules
-        let selectedTitle = this.state.selectedModule.title
+        let selectedId = this.state.selectedModule.id
         let ptr = 0
         let isLessonEdit=this.state.isLessonEdit
         for(let m in modules)
         {
-            if(modules[m].title == selectedTitle)
+            if(modules[m].id == selectedId)
             {
                 ptr = m
                 break
             }
         }
         if(!isLessonEdit) {
-            let lessonObj = {title: lessonName,
+            let lessonObj = {
+                id:(new Date()).getTime() + '_lesson',
+                title: lessonName,
                 topics:[
                     {
-                        title:'New Topic'
+                        id:(new Date()).getTime() + '_topic',
+                        title:'New Topic',
+                        widgets: [
+                            {
+                                id: (new Date()).getTime() + '_wid',
+                                type: "HEADING",
+                                size: 1,
+                                text: "The Document Object Model"
+                            }]
                     }
                 ]}
             course.modules[ptr].lessons.push(lessonObj)
@@ -73,10 +83,10 @@ export default class CourseEditor extends Component {
         else
         {
             let lessons = course.modules[ptr].lessons
-            let selectedLessonTitle = this.state.selectedLessonTitle
+            let selectedLessonId = this.state.selectedLessonId
             for(let l in lessons)
             {
-                if(lessons[l].title == selectedLessonTitle)
+                if(lessons[l].id == selectedLessonId)
                 {
                     lessons[l].title = lessonName
                     break
@@ -86,7 +96,7 @@ export default class CourseEditor extends Component {
             }
             this.setState(
                 {
-                    selectedLessonTitle:'',
+                    selectedLessonId:'',
                     isLessonEdit:false
                 }
             )
@@ -123,6 +133,7 @@ export default class CourseEditor extends Component {
             title:moduleName,
             lessons:[
                 {
+                    id:(new Date()).getTime() + '_lesson',
                     title:'New Lesson',
                     topics:[
                         {
@@ -148,19 +159,19 @@ export default class CourseEditor extends Component {
         else
         {
             let modules = course.modules
-            let selectedModTitle = this.state.selectedModuleTitle
+            let selectedModuleId = this.state.selectedModuleId
             
 
             for(let m in modules)
             {
-                if(modules[m].title == selectedModTitle )
+                if(modules[m].id == selectedModuleId )
                 {
                     modules[m].title = moduleName
                     break
                 }
             }
             this.setState({
-                selectedModuleTitle:""
+                selectedModuleId:""
             })
             this.setState({
                 isEdit:false
@@ -181,7 +192,7 @@ export default class CourseEditor extends Component {
         document.getElementById('module-add').value = module.title
         this.setState(
             {
-                selectedModuleTitle:module.title
+                selectedModuleId:module.id
             }
         )
         this.setState(
@@ -199,7 +210,7 @@ export default class CourseEditor extends Component {
         let modules = course.modules
         for(let m in modules)
         {
-            if(modules[m].title == selectedModule.title)
+            if(modules[m].id == selectedModule.id)
             {
                 ptr = m
                 break
@@ -227,7 +238,7 @@ export default class CourseEditor extends Component {
     {
         this.setState(
             {
-                selectedLessonTitle:lesson.title,
+                selectedLessonId:lesson.id,
                 isLessonEdit:true
             }
         )
@@ -244,7 +255,7 @@ export default class CourseEditor extends Component {
         this.setState(
             {
                 isTopicEdit:true,
-                selectedTopicTitle:topic.title
+                selectedTopicId:topic.id
             }
         )
         document.getElementById('topic-add-btn').innerHTML = 'Update Topic'
@@ -268,7 +279,7 @@ export default class CourseEditor extends Component {
         let modPtr = 0
         for(let m in modules)
         {
-            if(modules[m].title == selectedModule.title)
+            if(modules[m].id == selectedModule.id)
             {
                 modPtr = m
                 break
@@ -277,7 +288,7 @@ export default class CourseEditor extends Component {
         let lessonPtr = 0
         for(let l in lessons)
         {
-            if(lessons[l].title == selectedLesson.title)
+            if(lessons[l].id == selectedLesson.id)
             {
                 lessonPtr = l
                 break
@@ -288,7 +299,7 @@ export default class CourseEditor extends Component {
         console.log(topics)
         for(let t in topics)
         {
-            if(topics[t].title == topic.title)
+            if(topics[t].id == topic.id)
             {
                 topicPtr = t
                 break
@@ -315,7 +326,7 @@ export default class CourseEditor extends Component {
         let lessonPtr = 0
         for(let l in lessons)
         {
-            if(lessons[l].title == selectedLesson.title)
+            if(lessons[l].id == selectedLesson.id)
             {
                 lessonPtr = l
                 break
@@ -340,12 +351,12 @@ export default class CourseEditor extends Component {
         }
         else
         {
-            let selectedTopicTitle = this.state.selectedTopicTitle
+            let selectedTopicId = this.state.selectedTopicId
             let topics = course.modules[modPtr].lessons[lessonPtr].topics
 
             for(let t in topics)
             {
-                if(topics[t].title == selectedTopicTitle)
+                if(topics[t].id == selectedTopicId)
                 {
                     topics[t].title = topicName
                     break
@@ -354,7 +365,7 @@ export default class CourseEditor extends Component {
             this.setState(
                 {
                     isTopicEdit:false,
-                    selectedTopicTitle:''
+                    selectedTopicId:''
                 }
             )
             document.getElementById('topic-add-btn').innerHTML = 'Add Topic'
