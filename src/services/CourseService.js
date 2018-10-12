@@ -18,7 +18,7 @@ let courses = [
                                     {
                                         id: '123_wid',
                                         type: "HEADING",
-                                        size: 1,
+                                        size: 4,
                                         text: "The Document Object Model"
                                     },
                                     {
@@ -625,14 +625,14 @@ export default class CourseService {
                     for(let t in courses[c].modules[m].lessons[l].topics) {
                         if(courses[c].modules[m].lessons[l].topics[t].id === topicId.id) {
                             courses[c].modules[m].lessons[l].topics[t].widgets.push(widget)
-                            console.log(courses);
+                            //console.log(courses);
                         }
                     }
                 }
             }
         }
     }
-    findWidgets = topicId => {
+    static findWidgets = topicId => {
         for(let c in courses) {
             for(let m in courses[c].modules) {
                 for(let l in courses[c].modules[m].lessons) {
@@ -660,17 +660,36 @@ export default class CourseService {
             }
         }
     }
-    deleteWidget = (forTopic, forWidget) => {
+    static updateWidget = (forTopic, forWidget) => {
         for(let c in courses) {
             for(let m in courses[c].modules) {
                 for(let l in courses[c].modules[m].lessons) {
                     for(let t in courses[c].modules[m].lessons[l].topics) {
-                        for(let to in courses[c].modules[m].lessons[l].topics[t])
-                        {
-                            if(courses[c].modules[m].lessons[l].topics[t].widgets[to].id === forWidget.id) {
-                                const widgetIndex = courses[c].modules[m].lessons[l].topics[t].widgets.findIndex(widget => widget.id === forWidget.id)
-                               // const widgetIndex = courses[c].modules[m].lessons[l].topics[t].widgets.findIndex(widget => widget.id === forWidget.id)
-                                courses[c].modules[m].lessons[l].topics[t].widgets.splice(widgetIndex, 1)
+                        if(courses[c].modules[m].lessons[l].topics[t].id === forTopic.id) {
+                            const widgetIndex = courses[c].modules[m].lessons[l].topics[t].widgets.findIndex(widget => widget.id === forWidget.id)
+                            courses[c].modules[m].lessons[l].topics[t].widgets[widgetIndex] = forWidget;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    static deleteWidget = (forTopic, forWidget) => {
+        for(let c in courses) {
+            for(let m in courses[c].modules) {
+                for(let l in courses[c].modules[m].lessons) {
+                    for(let t in courses[c].modules[m].lessons[l].topics) {
+                        if(courses[c].modules[m].lessons[l].topics[t].id === forTopic.id) {
+                            //const widgetIndex = courses[c].modules[m].lessons[l].topics[t].widgets.findIndex(widget => widget.id === forWidget.id)
+                            //courses[c].modules[m].lessons[l].topics[t].widgets.splice(widgetIndex, 1)
+                            //let cntr = 0
+                            for(let w in courses[c].modules[m].lessons[l].topics[t].widgets)
+                            {
+                                if(courses[c].modules[m].lessons[l].topics[t].widgets[w].id === forWidget.id)
+                                {
+                                    courses[c].modules[m].lessons[l].topics[t].widgets.splice(w, 1)
+                                    break
+                                }
                             }
                         }
                     }

@@ -22,8 +22,8 @@ const TopicPills = ({topics, selectTopic, selectedTopic,deleteTopic,editTopic,ad
             <button className="btn btn-primary" id="topic-add-btn" onClick={() => addTopic()}>Add Topic</button>
         </li>
         </ul>
-        <WidgetList widgets={findWidgets(selectedTopic)}
-                    createWidget = {createWidget}/>
+        {/*<WidgetList widgets={findWidgets(selectedTopic)}
+                    createWidget = {createWidget}/>*/}
         <button className="btn btn-danger pull-right m-4" id="add-widget" onClick={() => createWidget(selectedTopic,{
             id: (new Date()).getTime() + '_wid',
             type: 'HEADING',
