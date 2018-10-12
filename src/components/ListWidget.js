@@ -1,12 +1,13 @@
 import React from "react";
 
+
 const ListWidget = () =>{
 
     return ( <div className="styles.widget-container">
         <div className="styles.widgets">
             <div className="new-widget border m-2">
                 <div className="widget-heading">
-                    <h3 id="widg-heading-554e8c72-a2c3-33d9-ae7a-5de166afb409">Heading Widget</h3>
+                    <h3 id="widg-heading-554e8c72-a2c3-33d9-ae7a-5de166afb409">List Widget</h3>
 
                     <div className="widget-changer">
                         <a href="#"><i className="fa fa-arrow-up mr-2 p-2 btn-secondary"></i></a>

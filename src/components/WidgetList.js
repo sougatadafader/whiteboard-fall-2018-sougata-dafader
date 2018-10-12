@@ -1,15 +1,23 @@
 import React from 'react'
 import styles from './WidgetList.style.css';
-
-
-
-
-
-
-
+import LinkWidget from "./LinkWidget";
+import HeadingWidget from "./HeadingWidget";
+import ListWidget from "./ListWidget";
+import ImageWidget from "./ImageWidget";
+import ParagraphWidget from "./ParagraphWidget";
 
 const WidgetList = () =>
     <div className="topic-widgets" id="topic-widgets">
+        <HeadingWidget/>
+        <ParagraphWidget/>
+        <ListWidget/>
+        <LinkWidget/>
+        <ImageWidget/>
+        <button className="btn btn-danger pull-right m-4" id="add-widget"><i className="fa fa-plus"></i></button>
+
+
+
+        {/*
         <div className="styles.widget-container">
             <div className="styles.widgets">
                 <div className="new-widget border m-2">
@@ -178,7 +186,7 @@ const WidgetList = () =>
                 </div>
             </div>
             <button className="btn btn-danger" id="add-widget"><i className="fa fa-plus"></i></button>
-        </div>
+        </div> */}
     </div>
 
 export default WidgetList
