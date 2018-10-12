@@ -618,18 +618,19 @@ export default class CourseService {
         })
     }
     createWidget = (topicId, widget) => {
+
         for(let c in courses) {
             for(let m in courses[c].modules) {
                 for(let l in courses[c].modules[m].lessons) {
                     for(let t in courses[c].modules[m].lessons[l].topics) {
                         if(courses[c].modules[m].lessons[l].topics[t].id === topicId.id) {
                             courses[c].modules[m].lessons[l].topics[t].widgets.push(widget)
+                            console.log(courses);
                         }
                     }
                 }
             }
         }
-
     }
     findWidgets = topicId => {
         for(let c in courses) {
@@ -664,9 +665,13 @@ export default class CourseService {
             for(let m in courses[c].modules) {
                 for(let l in courses[c].modules[m].lessons) {
                     for(let t in courses[c].modules[m].lessons[l].topics) {
-                        if(courses[c].modules[m].lessons[l].topics[t].id === forTopic.id) {
-                            const widgetIndex = courses[c].modules[m].lessons[l].topics[t].widgets.findIndex(widget => widget.id === forWidget.id)
-                            courses[c].modules[m].lessons[l].topics[t].widgets.splice(widgetIndex, 1)
+                        for(let to in courses[c].modules[m].lessons[l].topics[t])
+                        {
+                            if(courses[c].modules[m].lessons[l].topics[t].widgets[to].id === forWidget.id) {
+                                const widgetIndex = courses[c].modules[m].lessons[l].topics[t].widgets.findIndex(widget => widget.id === forWidget.id)
+                               // const widgetIndex = courses[c].modules[m].lessons[l].topics[t].widgets.findIndex(widget => widget.id === forWidget.id)
+                                courses[c].modules[m].lessons[l].topics[t].widgets.splice(widgetIndex, 1)
+                            }
                         }
                     }
                 }

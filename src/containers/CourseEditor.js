@@ -411,7 +411,6 @@ export default class CourseEditor extends Component {
                             editLesson={this.editLesson}
                         />
                         <TopicPills
-                            selectTopic={this.selectTopic}
                             selectedTopic={this.state.selectedTopic}
                             deleteTopic={this.deleteTopic}
                             topics={this.state.selectedLesson.topics}
@@ -419,6 +418,7 @@ export default class CourseEditor extends Component {
                             addTopic = {this.addTopic}
                             selectTopic = {this.selectTopic}
                             findWidgets = {this.props.findWidgets}
+                            createWidget = {this.props.createWidget}
                         />
                         <br/>
                         {/*<WidgetList widgets={this.props.findWidgets(this.state.selectedTopic)}

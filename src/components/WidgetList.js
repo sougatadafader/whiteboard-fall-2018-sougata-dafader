@@ -6,7 +6,7 @@ import ListWidget from "./ListWidget";
 import ImageWidget from "./ImageWidget";
 import ParagraphWidget from "./ParagraphWidget";
 
-const WidgetList = ({widgets}) =>
+const WidgetList = ({widgets,createWidget}) =>
 
     <div className="topic-widgets" id="topic-widgets">
         <ul className="list-group">
@@ -18,7 +18,7 @@ const WidgetList = ({widgets}) =>
                 )
             }
         </ul>
-        <button className="btn btn-danger pull-right m-4" id="add-widget"><i className="fa fa-plus"></i></button>
+
     </div>
         {/*Widget
 

@@ -28,7 +28,7 @@ const LinkWidget = () =>{
                             Link URL</label>
                         <div className="col-sm-10">
                             <input className="form-control" type="url" className="head-text" id="linkurl-{{guid}}"
-                                   placeholder="Some Link" value="#" required data-preview="linkprev-{{guid}}"/>
+                                   placeholder="Some Link" required data-preview="linkprev-{{guid}}"/>
                         </div>
                     </div>
                     <div className="form-group row">
@@ -36,7 +36,7 @@ const LinkWidget = () =>{
                             Link Text</label>
                         <div className="col-sm-10">
                             <input className="form-control" type="text" className="head-text" id="linktext-{{guid}}"
-                                   placeholder="Some Link" value="Link Text" required
+                                   placeholder="Some Link"  required
                                    data-preview="linkprev-{{guid}}"/>
                         </div>
                     </div>

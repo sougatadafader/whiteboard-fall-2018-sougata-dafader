@@ -41,6 +41,15 @@ export default class WhiteBoard extends Component {
             courses: this.courseService.findAllCourses()
         })
     }
+    createWidget = (selectedTopic,widget) =>{
+        this.courseService.createWidget(selectedTopic,widget)
+        this.setState(
+            {
+                courses: this.courseService.findAllCourses()
+            }
+        )
+
+    }
 
     render() {
         return (
@@ -80,7 +89,7 @@ export default class WhiteBoard extends Component {
                                     deleteModule={this.deleteModule}
                                     courses={this.state.courses}
                                     findWidgets ={this.courseService.findWidgets}
-                                    createWidget = {this.courseService.createWidget}
+                                    createWidget = {this.createWidget}
                                 />}
                             path="/course/:courseId/edit"/>
                     </div>
