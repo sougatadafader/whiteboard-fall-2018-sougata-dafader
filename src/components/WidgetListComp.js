@@ -102,7 +102,13 @@ class WidgetListComp extends Component {
             <div>
                 <div className="mb-2 clearfix">
                     <button type="button" className="pull-right btn btn-success">Save</button>
-                    <button type="button" id='preview-btn' className="pull-right btn btn-primary" data-preview="Off" onClick={()=>this.previewToggle()}>Preview Off</button>
+                    <div className="pull-right">
+                        <span className="h3">Preview</span>
+                    <label className="switch">
+                        <input type="checkbox" id='preview-btn' data-preview="Off" onClick={()=>this.previewToggle()}/>
+                            <span className="slider round"></span>
+                    </label>
+                    </div>
                 </div>
 
                 <ul className="list-group m-0" id="widget-list">
@@ -110,9 +116,11 @@ class WidgetListComp extends Component {
                         this.props.widgets.map((widget, index) =>
                             <li key={index} className="list-group-item">
                                 <div className="row mb-2">
-                                    <h3 className="col-7">{widget.type} Widget</h3>
-                                    <a href="#"><i className="fa fa-arrow-up mr-2 p-2 btn-secondary"></i></a>
-                                    <a href="#"><i className="fa fa-arrow-down mr-2 p-2 btn-secondary"></i></a>
+                                    <div className="col-7 h1">{widget.type} Widget</div>
+                                    <div className="col-5">
+                                    <a  href="#"><i className="fa fa-arrow-up mr-2 p-2 btn-secondary"></i></a>
+                                    <a  href="#"><i className="fa fa-arrow-down mr-2 p-2 btn-secondary"></i></a>
+
                                     <select id={widget.id+'-selector'} defaultValue="HEADING" onChange={()=>this.updateType(widget)}>
                                         <option value="HEADING" >Heading</option>
                                         <option value="PARAGRAPH">Paragraph</option>
@@ -122,8 +130,9 @@ class WidgetListComp extends Component {
                                     </select>
                                     <button
                                         onClick={() => this.props.deleteWidget(widget)}
-                                        className="col-1 ml-4 btn btn-danger  fa fa-times">
+                                        className="col-1 p-1 btn btn-danger fa fa-times pull-right">
                                     </button>
+                                    </div>
                                 </div>
                                 <div className="clearfix"></div>
                                 <div>
