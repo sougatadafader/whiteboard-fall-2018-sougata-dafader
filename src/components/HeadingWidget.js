@@ -2,6 +2,7 @@ import React from "react";
 
 const HeadingWidget = ({updateHeadingWidget,widget}) =>
     <div className="heading-widget">
+        <div className="element-container">
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Heading Text</label>
             <div className="col-sm-10">
@@ -21,8 +22,10 @@ const HeadingWidget = ({updateHeadingWidget,widget}) =>
                 </select>
             </div>
         </div>
+
         <h2>PREVIEW</h2>
-        <div>
+        </div>
+        <div className="preview-container text-primary">
 
         {widget.size === 1 && <h1>{widget.text}</h1>}
         {widget.size === 2 && <h2>{widget.text}</h2>}

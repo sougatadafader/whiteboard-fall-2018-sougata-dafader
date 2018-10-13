@@ -2,6 +2,7 @@ import React from "react";
 
 const ImageWidget = ({updateImageWidget,widget}) =>
     <div className="widget-heading">
+        <div className="element-container">
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Image URL</label>
             <div className="col-sm-10">
@@ -15,7 +16,8 @@ const ImageWidget = ({updateImageWidget,widget}) =>
             </div>
         </div>
         <h2>PREVIEW</h2>
-        <div>
+        </div>
+        <div className="preview-container">
             <img src={widget.src}></img>
         </div>
     </div>

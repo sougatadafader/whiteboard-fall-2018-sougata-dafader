@@ -2,6 +2,7 @@ import React from "react";
 
 const LinkWidget = ({updateLinkWidget,widget}) =>
     <div className="heading-widget">
+        <div className="element-container">
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Widget Name</label>
             <div className="col-sm-10">
@@ -21,7 +22,10 @@ const LinkWidget = ({updateLinkWidget,widget}) =>
             </div>
         </div>
         <h2>PREVIEW</h2>
+        </div>
+        <div className="preview-container">
         <a href={widget.href}>{widget.text}</a>
+        </div>
     </div>
 
 

@@ -31,6 +31,7 @@ let courses = [
                                     {
                                         id: '345_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -70,6 +71,7 @@ let courses = [
                                     {
                                         id: '890_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -116,6 +118,7 @@ let courses = [
                                     {
                                         id: '3456_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -155,6 +158,7 @@ let courses = [
                                     {
                                         id: '8901_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -194,7 +198,9 @@ let courses = [
                                     {
                                         id: '003_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name:'',
+
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
@@ -239,6 +245,7 @@ let courses = [
                                     {
                                         id: '114_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -278,6 +285,7 @@ let courses = [
                                     {
                                         id: '223_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -329,6 +337,7 @@ let courses = [
                                     {
                                         id: '332_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -374,6 +383,7 @@ let courses = [
                                     {
                                         id: '442_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -419,6 +429,7 @@ let courses = [
                                     {
                                         id: '552_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -476,6 +487,7 @@ let courses = [
                                     {
                                         id: '662_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -515,6 +527,7 @@ let courses = [
                                     {
                                         id: '772_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -554,6 +567,7 @@ let courses = [
                                     {
                                         id: '882_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -599,6 +613,7 @@ let courses = [
                                     {
                                         id: '992_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
@@ -650,6 +665,7 @@ let courses = [
                                     {
                                         id: '003_wid',
                                         type: "LIST",
+                                        listtyp:'ul',
                                         name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },

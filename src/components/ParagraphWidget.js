@@ -3,6 +3,7 @@ import React from "react";
 const ParagraphWidget = ({updateParagraphWidget,widget}) =>
 
     <div className="widget-heading">
+        <div className="element-container">
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Paragraph Text</label>
             <div className="col-sm-10">
@@ -10,7 +11,8 @@ const ParagraphWidget = ({updateParagraphWidget,widget}) =>
             </div>
         </div>
         <h2>PREVIEW</h2>
-        <div>
+        </div>
+        <div className="preview-container">
             <p className="text-primary">{widget.text}</p>
         </div>
     </div>
