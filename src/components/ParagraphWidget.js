@@ -1,8 +1,33 @@
 import React from "react";
 
-const ParagraphWidget = () =>{
+const ParagraphWidget = ({updateParagraphWidget,widget}) =>
 
-    return ( <div className="styles.widget-container">
+    <div className="widget-heading">
+        <div className="form-group row">
+            <label className="col-sm-2 col-form-label">Paragraph Text</label>
+            <div className="col-sm-10">
+                <textarea className="form-control" placeholder="Some Heading" id={widget.id+'-para'} required="" defaultValue={widget.text} onChange={()=>updateParagraphWidget(widget)}/>
+            </div>
+        </div>
+        <h2>PREVIEW</h2>
+        <div>
+            <p className="text-primary">{widget.text}</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {/*return ( <div className="styles.widget-container">
         <div className="styles.widgets">
             <div className="new-widget border m-2">
                 <div className="widget-heading">
@@ -48,7 +73,6 @@ const ParagraphWidget = () =>{
 
             </div>
         </div>
-    </div> )
-}
+    </div> )*/}
 
 export default ParagraphWidget

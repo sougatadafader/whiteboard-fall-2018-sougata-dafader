@@ -1,6 +1,51 @@
 import React from "react";
 
-const LinkWidget = () =>{
+const LinkWidget = ({updateLinkWidget,widget}) =>
+    <div className="heading-widget">
+        <div className="form-group row">
+            <label className="col-sm-2 col-form-label">Widget Name</label>
+            <div className="col-sm-10">
+                <input className="form-control" placeholder="Widget Name" id={widget.id+'-name'} required="" defaultValue={widget.name} onChange={()=>updateLinkWidget(widget)}/>
+            </div>
+        </div>
+        <div className="form-group row">
+            <label className="col-sm-2 col-form-label">Link Url</label>
+            <div className="col-sm-10">
+                <input className="form-control" placeholder="Some URL" id={widget.id+'-url'} required="" defaultValue={widget.href} onChange={()=>updateLinkWidget(widget)}/>
+            </div>
+        </div>
+        <div className="form-group row">
+            <label className="col-sm-2 col-form-label">Link Text</label>
+            <div className="col-sm-10">
+                <input className="form-control" placeholder="Widget Text" id={widget.id+'-text'} required="" defaultValue="LINK TEXT" onChange={()=>updateLinkWidget(widget)}/>
+            </div>
+        </div>
+        <h2>PREVIEW</h2>
+        <a href={widget.href}>{widget.text}</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/*
 
     return ( <div className="styles.widget-container">
         <div className="styles.widgets">
@@ -53,7 +98,6 @@ const LinkWidget = () =>{
                 </div>
             </div>
         </div>
-    </div> )
-}
+    </div> )*/}
 
 export default LinkWidget

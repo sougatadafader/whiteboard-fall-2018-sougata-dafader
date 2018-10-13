@@ -1,7 +1,36 @@
 import React from "react";
 
-const ImageWidget = () =>{
+const ImageWidget = ({updateImageWidget,widget}) =>
+    <div className="widget-heading">
+        <div className="form-group row">
+            <label className="col-sm-2 col-form-label">Image URL</label>
+            <div className="col-sm-10">
+                <input className="form-control" placeholder="Some URL" id={widget.id+'-src'} required="" defaultValue={widget.src} onChange={()=>updateImageWidget(widget)}/>
+            </div>
+        </div>
+        <div className="form-group row">
+            <label className="col-sm-2 col-form-label">Widget Name</label>
+            <div className="col-sm-10">
+                <input className="form-control" placeholder="Widget Name" id={widget.id+'-name'} required="" defaultValue={widget.name} onChange={()=>updateImageWidget(widget)}/>
+            </div>
+        </div>
+        <h2>PREVIEW</h2>
+        <div>
+            <img src={widget.src}></img>
+        </div>
+    </div>
 
+
+
+
+
+
+
+
+
+
+
+{/*
     return ( <div className="styles.widget-container">
         <div className="styles.widgets">
             <div className="new-widget border m-2">
@@ -44,7 +73,7 @@ const ImageWidget = () =>{
             </div>
         </div>
     </div> )
-}
+*/}
 
 export default ImageWidget
 

@@ -18,28 +18,34 @@ let courses = [
                                     {
                                         id: '123_wid',
                                         type: "HEADING",
+                                        name:'',
                                         size: 4,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '234_wid',
                                         type: "PARAGRAPH",
+                                        name:'',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '345_wid',
                                         type: "LIST",
+                                        name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '456_wid',
                                         type: "IMAGE",
+                                        name:'',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '567_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
                                         title: "The DOM",
+                                        name:'',
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
                                 ]
@@ -51,28 +57,34 @@ let courses = [
                                     {
                                         id: '678_wid',
                                         type: "HEADING",
+                                        name:'',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '789_wid',
                                         type: "PARAGRAPH",
+                                        name:'',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '890_wid',
                                         type: "LIST",
+                                        name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '901_wid',
                                         type: "IMAGE",
+                                        name:'',
                                         title: "The DOM",
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '012_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name:'',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -91,27 +103,33 @@ let courses = [
                                     {
                                         id: '1234_wid',
                                         type: "HEADING",
+                                        name:'',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '2345_wid',
                                         type: "PARAGRAPH",
+                                        name:'',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '3456_wid',
                                         type: "LIST",
+                                        name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '4567_wid',
                                         type: "IMAGE",
+                                        name:'',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '5678_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name:'',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -124,27 +142,33 @@ let courses = [
                                     {
                                         id: '6789_wid',
                                         type: "HEADING",
+                                        name:'',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '7890_wid',
                                         type: "PARAGRAPH",
+                                        name:'',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '8901_wid',
                                         type: "LIST",
+                                        name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '9012_wid',
                                         type: "IMAGE",
+                                        name:'',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '0123_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name:'',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -157,27 +181,33 @@ let courses = [
                                     {
                                         id: '001_wid',
                                         type: "HEADING",
+                                        name:'',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '002_wid',
                                         type: "PARAGRAPH",
+                                        name:'',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '003_wid',
                                         type: "LIST",
+                                        name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '004_wid',
                                         type: "IMAGE",
+                                        name:'',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '005_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name:'',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -196,27 +226,33 @@ let courses = [
                                     {
                                         id: '112_wid',
                                         type: "HEADING",
+                                        name:'',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '113_wid',
                                         type: "PARAGRAPH",
+                                        name:'',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '114_wid',
                                         type: "LIST",
+                                        name:'',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '115_wid',
                                         type: "IMAGE",
+                                        name:'',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '116_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name:'',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -229,27 +265,33 @@ let courses = [
                                     {
                                         id: '221_wid',
                                         type: "HEADING",
+                                        name:'',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '222_wid',
                                         type: "PARAGRAPH",
+                                        name: '',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '223_wid',
                                         type: "LIST",
+                                        name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '224_wid',
                                         type: "IMAGE",
+                                        name: '',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '225_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name: '',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -274,27 +316,33 @@ let courses = [
                                     {
                                         id: '330_wid',
                                         type: "HEADING",
+                                        name: '',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '331_wid',
                                         type: "PARAGRAPH",
+                                        name: '',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '332_wid',
                                         type: "LIST",
+                                        name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '333_wid',
                                         type: "IMAGE",
+                                        name: '',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '334_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name: '',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -313,27 +361,33 @@ let courses = [
                                     {
                                         id: '440_wid',
                                         type: "HEADING",
+                                        name: '',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '441_wid',
                                         type: "PARAGRAPH",
+                                        name: '',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '442_wid',
                                         type: "LIST",
+                                        name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '443_wid',
                                         type: "IMAGE",
+                                        name: '',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '444_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name: '',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -352,27 +406,33 @@ let courses = [
                                     {
                                         id: '550_wid',
                                         type: "HEADING",
+                                        name: '',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '551_wid',
                                         type: "PARAGRAPH",
+                                        name: '',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '552_wid',
                                         type: "LIST",
+                                        name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '553_wid',
                                         type: "IMAGE",
+                                        name: '',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '554_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name: '',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -403,27 +463,33 @@ let courses = [
                                     {
                                         id: '660_wid',
                                         type: "HEADING",
+                                        name: '',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '661_wid',
                                         type: "PARAGRAPH",
+                                        name: '',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '662_wid',
                                         type: "LIST",
+                                        name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '663_wid',
                                         type: "IMAGE",
+                                        name: '',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '664_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name: '',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -436,27 +502,33 @@ let courses = [
                                     {
                                         id: '770_wid',
                                         type: "HEADING",
+                                        name: '',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '771_wid',
                                         type: "PARAGRAPH",
+                                        name: '',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '772_wid',
                                         type: "LIST",
+                                        name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '773_wid',
                                         type: "IMAGE",
+                                        name: '',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '774_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name: '',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -469,27 +541,33 @@ let courses = [
                                     {
                                         id: '880_wid',
                                         type: "HEADING",
+                                        name: '',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '881_wid',
                                         type: "PARAGRAPH",
+                                        name: '',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '882_wid',
                                         type: "LIST",
+                                        name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '883_wid',
                                         type: "IMAGE",
+                                        name: '',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '884_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name: '',
                                         title: "The DOM",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -508,27 +586,33 @@ let courses = [
                                     {
                                         id: '990_wid',
                                         type: "HEADING",
+                                        name: '',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '991_wid',
                                         type: "PARAGRAPH",
+                                        name: '',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '992_wid',
                                         type: "LIST",
+                                        name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '993_wid',
                                         type: "IMAGE",
+                                        name: '',
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '994_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name: '',
                                         title: "The DOMion",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
@@ -553,28 +637,34 @@ let courses = [
                                     {
                                         id: '001_wid',
                                         type: "HEADING",
+                                        name: '',
                                         size: 1,
                                         text: "The Document Object Model"
                                     },
                                     {
                                         id: '002_wid',
                                         type: "PARAGRAPH",
+                                        name: '',
                                         text: "This topic introduces the DOM"
                                     },
                                     {
                                         id: '003_wid',
                                         type: "LIST",
+                                        name: '',
                                         items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
                                     },
                                     {
                                         id: '004_wid',
                                         type: "IMAGE",
+                                        name: '',
                                         title:"Hello",
                                         src: "https://picsum.photos/200"
                                     },
                                     {
                                         id: '005_wid',
                                         type: "LINK",
+                                        text: 'LINK TEXT',
+                                        name: '',
                                         title: "The DOMinator",
                                         href: "https://en.wikipedia.org/wiki/Document_Object_Model"
                                     }
