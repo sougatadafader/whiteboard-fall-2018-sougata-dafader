@@ -7,23 +7,31 @@ const WidgetReducer = (state ={widgets:[]},action) =>{
                 widgets: CourseService.findWidgets(action.topic),
                 selectedTopic:action.topic
             }
+
+        case "CREATE_WIDGET":
+            CourseService.createWidget(state.selectedTopic, action.widget)
+            const newWidgets2 = CourseService.findWidgets(state.selectedTopic)
+            return{
+                widgets:newWidgets2.slice(0),
+                selectedTopic: state.selectedTopic
+
+            }
         case "DELETE_WIDGET":
             CourseService.deleteWidget(state.selectedTopic, action.widget)
             const newWidgets = CourseService.findWidgets(state.selectedTopic)
             return{
                 widgets:newWidgets.slice(0),
-                selectedTopic: state.selectedTopic
+                selectedeleteWidgetdTopic: state.selectedTopic
             }
         case "UPDATE_WIDGET":
             CourseService.updateWidget(state.selectedTopic,action.widget)
-            //console.log(CourseService.findWidgets(state.selectedTopic).slice(0))
+
             return{
                 widgets: CourseService.findWidgets(state.selectedTopic).slice(0),
                 selectedTopic:state.selectedTopic
             }
         case "MOVE_UP":
             CourseService.moveUp(state.selectedTopic,action.widget)
-            //console.log(CourseService.findWidgets(state.selectedTopic).slice(0))
             return{
                 widgets: CourseService.findWidgets(state.selectedTopic).slice(0),
                 selectedTopic:state.selectedTopic

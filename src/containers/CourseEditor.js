@@ -26,10 +26,9 @@ export default class CourseEditor extends Component {
 
         // use courseId to find the course object from the
         // courses array passed in as a property
-        console.log(this.props.courses)
+
         const course = this.props.courses.find(
             course => course.id === courseId);
-        console.log(course)
         const selectedModule = course.modules[0];
         const selectedLesson = selectedModule.lessons[0];
         const selectedTopic = selectedLesson.topics[0]
@@ -46,7 +45,6 @@ export default class CourseEditor extends Component {
             isLessonEdit:false,
             isTopicEdit:false
         }
-        console.log(this.state.course)
     }
     addLesson = () => {
 

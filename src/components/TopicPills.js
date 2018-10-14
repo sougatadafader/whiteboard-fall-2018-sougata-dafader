@@ -23,13 +23,13 @@ const TopicPills = ({topics, selectTopic, selectedTopic,deleteTopic,editTopic,ad
         </li>
         </ul>
         {/*<WidgetList widgets={findWidgets(selectedTopic)}
-                    createWidget = {createWidget}/>*/}
+                    createWidget = {createWidget}/>
         <button className="btn btn-danger pull-right m-4" id="add-widget" onClick={() => createWidget(selectedTopic,{
             id: (new Date()).getTime() + '_wid',
             type: 'HEADING',
             size: 1,
             text: 'The Document'
-        })}><i className="fa fa-plus"></i></button>
+        })}><i className="fa fa-plus"></i></button>*/}
     </div>
 
 export default TopicPills

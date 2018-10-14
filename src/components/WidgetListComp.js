@@ -11,15 +11,12 @@ class WidgetListComp extends Component {
     constructor(props){
         super(props);
         props.init(props.widgetsInit,props.topic)
-        console.log('Init '+props.topic.id)
-        console.log(props.topic.widgets)
+
     }
     componentDidUpdate(){
-        //alert('Refreshed')
         this.props.init(this.props.widgetsInit,this.props.topic)
-        console.log('Refreshed '+this.props.topic.id)
-        console.log(this.props.topic.widgets)
     }
+
     updateHeadingWidget = (widget) =>
     {
         let newHeading = document.getElementById(widget.id+'-heading').value
@@ -27,17 +24,12 @@ class WidgetListComp extends Component {
         //alert(newHeading)
         widget.text = newHeading
         widget.size = parseInt(newSize)
-        //console.log(widget)
         this.props.updateWidget(widget)
     }
     updateParagraphWidget = (widget) =>
     {
         let newHeading = document.getElementById(widget.id+'-para').value
-
-        //alert(newHeading)
         widget.text = newHeading
-
-        //console.log(widget)
         this.props.updateWidget(widget)
     }
 
@@ -73,7 +65,6 @@ class WidgetListComp extends Component {
     {
         let type = document.getElementById(widget.id+'-selector').value
         widget.type = type
-        console.log(type)
         if(type === 'LIST')
         {
             widget.items = 'Item 1,Item 2'
@@ -114,7 +105,7 @@ class WidgetListComp extends Component {
             <div>
                 <div className="mb-2 clearfix">
                     <div className="pull-right">
-                        <span className="h5">Preview</span>
+                        <span className="h5 ml-3 mr-3">Preview</span>
                         <label className="switch">
                             <input type="checkbox" id='preview-btn' data-preview="Off" onClick={()=>this.previewToggle()}/>
                             <span className="slider round"></span>
@@ -160,10 +151,18 @@ class WidgetListComp extends Component {
                                     {widget.type === "LIST" && <ListWidget updateListWidget={this.updateListWidget}
                                                                            widget={widget}/>}
                                 </div>
-                            </li>)
+                            </li>
+
+                        )
                     }
 
                 </ul>
+                <button className="btn btn-danger pull-right m-4" id="add-widget"  onClick={() => this.props.createWidget({
+                    id: (new Date()).getTime() + '_wid',
+                    type: 'HEADING',
+                    size: 1,
+                    text: 'The Document'
+                })}><i className="fa fa-plus"></i></button>
             </div>
 
         )
