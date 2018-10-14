@@ -21,6 +21,19 @@ const WidgetReducer = (state ={widgets:[]},action) =>{
                 widgets: CourseService.findWidgets(state.selectedTopic).slice(0),
                 selectedTopic:state.selectedTopic
             }
+        case "MOVE_UP":
+            CourseService.moveUp(state.selectedTopic,action.widget)
+            //console.log(CourseService.findWidgets(state.selectedTopic).slice(0))
+            return{
+                widgets: CourseService.findWidgets(state.selectedTopic).slice(0),
+                selectedTopic:state.selectedTopic
+            }
+        case "MOVE_DOWN":
+            CourseService.moveDown(state.selectedTopic,action.widget)
+            return{
+                widgets: CourseService.findWidgets(state.selectedTopic).slice(0),
+                selectedTopic:state.selectedTopic
+            }
             default:
                 return state
 }

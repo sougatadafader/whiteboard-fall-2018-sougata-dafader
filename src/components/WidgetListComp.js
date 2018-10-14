@@ -99,6 +99,15 @@ class WidgetListComp extends Component {
             widgetList.classList.remove('hide')
         }
     }
+    moveUp = (widget) =>
+    {
+        this.props.moveUp(widget)
+    }
+    moveDown = (widget) =>
+    {
+        this.props.moveDown(widget)
+    }
+
 
     render(){
         return(
@@ -118,14 +127,14 @@ class WidgetListComp extends Component {
                 <ul className="list-group m-0" id="widget-list">
                     {
                         this.props.widgets.map((widget, index) =>
-                            <li key={index} className="list-group-item">
+                            <li key={index} className="list-group-item widget-list-item">
                                 <div className="row mb-2">
                                     <div className="col-7 h1">{widget.type} Widget</div>
                                     <div className="col-5">
-                                    <a  href="#"><i className="fa fa-arrow-up mr-2 p-2 btn-secondary"></i></a>
-                                    <a  href="#"><i className="fa fa-arrow-down mr-2 p-2 btn-secondary"></i></a>
+                                    <a  href="#" onClick={()=>this.moveUp(widget)}><i className="fa fa-arrow-up mr-2 p-2 btn-secondary"></i></a>
+                                    <a  href="#" onClick={()=>this.moveDown(widget)}><i className="fa fa-arrow-down mr-2 p-2 btn-secondary"></i></a>
 
-                                    <select id={widget.id+'-selector'} defaultValue="HEADING" onChange={()=>this.updateType(widget)}>
+                                    <select id={widget.id+'-selector'} defaultValue="HEADING" value={widget.type} onChange={()=>this.updateType(widget)}>
                                         <option value="HEADING" >Heading</option>
                                         <option value="PARAGRAPH">Paragraph</option>
                                         <option value="LIST" >List</option>

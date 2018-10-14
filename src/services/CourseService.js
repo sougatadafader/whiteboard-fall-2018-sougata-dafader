@@ -723,6 +723,7 @@ export default class CourseService {
             return course;
         })
     }
+
     createWidget = (topicId, widget) => {
 
         for(let c in courses) {
@@ -797,6 +798,73 @@ export default class CourseService {
                                     break
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    static moveUp = (forTopic, forWidget) => {
+        for(let c in courses) {
+            for(let m in courses[c].modules) {
+                for(let l in courses[c].modules[m].lessons) {
+                    for(let t in courses[c].modules[m].lessons[l].topics) {
+                        if(courses[c].modules[m].lessons[l].topics[t].id === forTopic.id) {
+                            //const widgetIndex = courses[c].modules[m].lessons[l].topics[t].widgets.findIndex(widget => widget.id === forWidget.id)
+                            //courses[c].modules[m].lessons[l].topics[t].widgets.splice(widgetIndex, 1)
+                            //let cntr = 0
+                            let index = 0
+                            for(let w in courses[c].modules[m].lessons[l].topics[t].widgets)
+                            {
+                                if(courses[c].modules[m].lessons[l].topics[t].widgets[w].id === forWidget.id)
+                                {
+                                    alert("Up")
+                                    //courses[c].modules[m].lessons[l].topics[t].widgets.splice(w, 1)
+                                    let temp = courses[c].modules[m].lessons[l].topics[t].widgets[w]
+                                    courses[c].modules[m].lessons[l].topics[t].widgets[w] = courses[c].modules[m].lessons[l].topics[t].widgets[w-1]
+                                    courses[c].modules[m].lessons[l].topics[t].widgets[w-1] =temp
+                                    break
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    static moveDown = (forTopic, forWidget) => {
+        for(let c in courses) {
+            for(let m in courses[c].modules) {
+                for(let l in courses[c].modules[m].lessons) {
+                    for(let t in courses[c].modules[m].lessons[l].topics) {
+                        if(courses[c].modules[m].lessons[l].topics[t].id === forTopic.id) {
+                            //const widgetIndex = courses[c].modules[m].lessons[l].topics[t].widgets.findIndex(widget => widget.id === forWidget.id)
+                            //courses[c].modules[m].lessons[l].topics[t].widgets.splice(widgetIndex, 1)
+                            let cntr = 0
+                            let index_arr = []
+                            let index = 0
+                            let topicWidgets = courses[c].modules[m].lessons[l].topics[t].widgets
+                            for(let w in courses[c].modules[m].lessons[l].topics[t].widgets)
+                            {
+                                index_arr[cntr] = w
+                                console.log(courses[c].modules[m].lessons[l].topics[t].widgets)
+                                if(courses[c].modules[m].lessons[l].topics[t].widgets[w].id === forWidget.id)
+                                {
+                                    //console.log("down")
+                                    //courses[c].modules[m].lessons[l].topics[t].widgets.splice(w, 1)
+                                    //console.log('Downward')
+                                    //console.log(courses[c].modules[m].lessons[l].topics[t].widgets[w])
+                                    //console.log(courses[c].modules[m].lessons[l].topics[t].widgets[w+1])
+                                    index = cntr
+
+                                    //break
+                                }
+                                cntr++
+                            }
+                            let temp = topicWidgets[index_arr[index]]
+                            topicWidgets[index_arr[index]] = topicWidgets[index_arr[index+1]]
+                            topicWidgets[index_arr[index+1]] =temp
                         }
                     }
                 }

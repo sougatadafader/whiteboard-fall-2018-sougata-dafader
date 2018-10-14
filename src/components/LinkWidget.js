@@ -18,7 +18,7 @@ const LinkWidget = ({updateLinkWidget,widget}) =>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Link Text</label>
             <div className="col-sm-10">
-                <input className="form-control" placeholder="Widget Text" id={widget.id+'-text'} required="" value="LINK TEXT" onChange={()=>updateLinkWidget(widget)}/>
+                <input className="form-control" placeholder="Widget Text" id={widget.id+'-text'} required="" value={widget.text} onChange={()=>updateLinkWidget(widget)}/>
             </div>
         </div>
         <h2 className="pt-5">PREVIEW</h2>

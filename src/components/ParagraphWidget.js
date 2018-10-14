@@ -13,7 +13,7 @@ const ParagraphWidget = ({updateParagraphWidget,widget}) =>
         <h2>PREVIEW</h2>
         </div>
         <div className="preview-container">
-            <p className="text-primary">{widget.text}</p>
+            <p className="text-info">{widget.text}</p>
         </div>
     </div>
 

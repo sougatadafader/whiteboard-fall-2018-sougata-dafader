@@ -30,7 +30,7 @@ const ListWidget = ({updateListWidget,widget}) =>{
         <h2 className="pt-5">PREVIEW</h2>
         </div>
         <div className="preview-container">
-            <widget.listtyp className="text-primary">
+            <widget.listtyp className="text-info">
                 {
                     widget.items.split(',').map((item, index) =>
                         <li key={index}>

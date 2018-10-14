@@ -21,6 +21,14 @@ const dispatcherToPropertyMapper = dispatch =>({
     updateWidget: widget => dispatch({
         type: 'UPDATE_WIDGET',
         widget:widget
+    }),
+    moveUp: widget => dispatch({
+        type: 'MOVE_UP',
+        widget:widget
+    }),
+    moveDown: widget => dispatch({
+        type: 'MOVE_DOWN',
+        widget:widget
     })
 })
 
