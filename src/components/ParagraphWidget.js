@@ -7,7 +7,7 @@ const ParagraphWidget = ({updateParagraphWidget,widget}) =>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Paragraph Text</label>
             <div className="col-sm-10">
-                <textarea className="form-control" placeholder="Some Heading" id={widget.id+'-para'} required="" defaultValue={widget.text} onChange={()=>updateParagraphWidget(widget)}/>
+                <textarea className="form-control" placeholder="Some Heading" id={widget.id+'-para'} required="" value={widget.text} onChange={()=>updateParagraphWidget(widget)}/>
             </div>
         </div>
         <h2>PREVIEW</h2>

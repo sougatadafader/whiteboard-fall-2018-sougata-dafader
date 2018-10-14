@@ -8,7 +8,7 @@ const ListWidget = ({updateListWidget,widget}) =>{
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">List Text</label>
             <div className="col-sm-10">
-                <textarea className="form-control" placeholder="Some Items" id={widget.id+'-items'} required="" defaultValue={widget.items} onChange={()=>updateListWidget(widget)}/>
+                <textarea className="form-control" placeholder="Some Items" id={widget.id+'-items'} required="" value={widget.items} onChange={()=>updateListWidget(widget)}/>
             </div>
         </div>
         <div className="form-group row">
@@ -23,7 +23,7 @@ const ListWidget = ({updateListWidget,widget}) =>{
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Widget Name</label>
             <div className="col-sm-10">
-                <input className="form-control" placeholder="Some Name" id={widget.id+'-name'} required="" defaultValue={widget.name} onChange={()=>updateListWidget(widget)}/>
+                <input className="form-control" placeholder="Some Name" id={widget.id+'-name'} required="" value={widget.name} onChange={()=>updateListWidget(widget)}/>
             </div>
         </div>
 

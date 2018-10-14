@@ -431,8 +431,9 @@ export default class CourseEditor extends Component {
                         <br/>
                         <Provider store={store}>
                             <WidgetListContainer
+                                widgetsInit={this.state.selectedTopic.widgets}
                                 topic={this.state.selectedTopic}
-                                widgetsInit={this.state.selectedTopic.widgets}/>
+                                />
                         </Provider>
                         {/*<WidgetList widgets={this.props.findWidgets(this.state.selectedTopic)}
                                     createWidget = {this.props.createWidget}

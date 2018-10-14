@@ -6,19 +6,19 @@ const LinkWidget = ({updateLinkWidget,widget}) =>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Widget Name</label>
             <div className="col-sm-10">
-                <input className="form-control" placeholder="Widget Name" id={widget.id+'-name'} required="" defaultValue={widget.name} onChange={()=>updateLinkWidget(widget)}/>
+                <input className="form-control" placeholder="Widget Name" id={widget.id+'-name'} required="" value={widget.name} onChange={()=>updateLinkWidget(widget)}/>
             </div>
         </div>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Link Url</label>
             <div className="col-sm-10">
-                <input className="form-control" placeholder="Some URL" id={widget.id+'-url'} required="" defaultValue={widget.href} onChange={()=>updateLinkWidget(widget)}/>
+                <input className="form-control" placeholder="Some URL" id={widget.id+'-url'} required="" value={widget.href} onChange={()=>updateLinkWidget(widget)}/>
             </div>
         </div>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Link Text</label>
             <div className="col-sm-10">
-                <input className="form-control" placeholder="Widget Text" id={widget.id+'-text'} required="" defaultValue="LINK TEXT" onChange={()=>updateLinkWidget(widget)}/>
+                <input className="form-control" placeholder="Widget Text" id={widget.id+'-text'} required="" value="LINK TEXT" onChange={()=>updateLinkWidget(widget)}/>
             </div>
         </div>
         <h2 className="pt-5">PREVIEW</h2>

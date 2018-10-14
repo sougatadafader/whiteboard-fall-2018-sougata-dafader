@@ -60,7 +60,7 @@ let courses = [
                                         type: "HEADING",
                                         name:'',
                                         size: 1,
-                                        text: "The Document Object Model"
+                                        text: "Hello 234"
                                     },
                                     {
                                         id: '789_wid',

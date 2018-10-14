@@ -6,13 +6,13 @@ const HeadingWidget = ({updateHeadingWidget,widget}) =>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Heading Text</label>
             <div className="col-sm-10">
-                <input className="form-control" placeholder="Some Heading" id={widget.id+'-heading'} required="" defaultValue={widget.text} onChange={()=>updateHeadingWidget(widget)}/>
+                <input className="form-control" placeholder="Some Heading" id={widget.id+'-heading'} required="" value={widget.text} onChange={()=>updateHeadingWidget(widget)}/>
             </div>
         </div>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Heading Size</label>
             <div className="col-sm-10">
-                <select className="form-control" required="" id={widget.id+'-size'} defaultValue={widget.size} onChange={()=>updateHeadingWidget(widget)}>
+                <select className="form-control" required="" id={widget.id+'-size'} value={widget.size} onChange={()=>updateHeadingWidget(widget)}>
                     <option value="1" >Heading 1</option>
                     <option value="2" >Heading 2</option>
                     <option value="3" >Heading 3</option>

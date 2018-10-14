@@ -11,11 +11,14 @@ class WidgetListComp extends Component {
     constructor(props){
         super(props);
         props.init(props.widgetsInit,props.topic)
-
+        console.log('Init '+props.topic.id)
+        console.log(props.topic.widgets)
     }
     componentDidUpdate(){
         //alert('Refreshed')
         this.props.init(this.props.widgetsInit,this.props.topic)
+        console.log('Refreshed '+this.props.topic.id)
+        console.log(this.props.topic.widgets)
     }
     updateHeadingWidget = (widget) =>
     {
@@ -101,14 +104,15 @@ class WidgetListComp extends Component {
         return(
             <div>
                 <div className="mb-2 clearfix">
-                    <button type="button" className="pull-right btn btn-success">Save</button>
                     <div className="pull-right">
-                        <span className="h3">Preview</span>
-                    <label className="switch">
-                        <input type="checkbox" id='preview-btn' data-preview="Off" onClick={()=>this.previewToggle()}/>
+                        <span className="h5">Preview</span>
+                        <label className="switch">
+                            <input type="checkbox" id='preview-btn' data-preview="Off" onClick={()=>this.previewToggle()}/>
                             <span className="slider round"></span>
-                    </label>
+                        </label>
                     </div>
+                    <button type="button" className="pull-right btn btn-success">Save</button>
+
                 </div>
 
                 <ul className="list-group m-0" id="widget-list">
