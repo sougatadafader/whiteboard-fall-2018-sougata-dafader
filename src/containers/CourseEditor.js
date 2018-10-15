@@ -4,7 +4,7 @@ import {Route} from 'react-router-dom'
 import LessonTabs from "../components/LessonTabs";
 import {Link} from 'react-router-dom'
 import TopicPills from "../components/TopicPills";
-import WidgetListComp from "../components/WidgetListComp";
+import WidgetList from "../components/WidgetList";
 
 import WidgetReducer from '../reducers/WidgetReducer'
 import WidgetListContainer from '../containers/WidgetListContainer'

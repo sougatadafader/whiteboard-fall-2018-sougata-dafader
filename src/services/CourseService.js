@@ -33,7 +33,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name:'',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '456_wid',
@@ -73,7 +73,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name:'',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '901_wid',
@@ -120,7 +120,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name:'',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '4567_wid',
@@ -160,7 +160,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name:'',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '9012_wid',
@@ -201,7 +201,7 @@ let courses = [
                                         listtyp:'ul',
                                         name:'',
 
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '004_wid',
@@ -247,7 +247,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name:'',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '115_wid',
@@ -287,7 +287,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name: '',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '224_wid',
@@ -339,7 +339,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name: '',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '333_wid',
@@ -385,7 +385,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name: '',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '443_wid',
@@ -431,7 +431,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name: '',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '553_wid',
@@ -489,7 +489,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name: '',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '663_wid',
@@ -529,7 +529,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name: '',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '773_wid',
@@ -569,7 +569,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name: '',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '883_wid',
@@ -615,7 +615,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name: '',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '993_wid',
@@ -667,7 +667,7 @@ let courses = [
                                         type: "LIST",
                                         listtyp:'ul',
                                         name: '',
-                                        items: "Nodes,Attributes,Tag names,IDs,Styles,Classes"
+                                        items: "Nodes\nAttributes\nTag names\nIDs\nStyles\nClasses"
                                     },
                                     {
                                         id: '004_wid',
@@ -751,7 +751,7 @@ export default class CourseService {
             }
         }
     }
-    findWidget = widgetId => {
+    static findWidget = widgetId => {
         for(let c in courses) {
             for(let m in courses[c].modules) {
                 for(let l in courses[c].modules[m].lessons) {

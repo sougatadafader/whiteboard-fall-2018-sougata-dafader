@@ -25,13 +25,25 @@ export default class CourseAdd extends Component {
                         title: this.state.title,
                         modules:[
                             {
-                                'title': 'Module 1',
+                                'id': (new Date()).getTime() + '_module',
+                                'title': 'New Module',
                                 'lessons': [
                                     {
-                                        'title': 'Lesson A',
+                                        'id': (new Date()).getTime() + '_lessons',
+                                        'title': 'New Lesson',
                                         'topics': [
                                             {
-                                                'title': 'Topic 1'
+                                                'id': (new Date()).getTime() + '_topic',
+                                                'title': 'New Topic',
+                                                'widgets': [
+                                                    {
+                                                        id: (new Date()).getTime() + '_wid',
+                                                        type: "HEADING",
+                                                        name:'',
+                                                        size: 4,
+                                                        text: "The Document Object Model"
+                                                    }
+                                                    ]
                                             }
                                         ]
                                     }]}]
