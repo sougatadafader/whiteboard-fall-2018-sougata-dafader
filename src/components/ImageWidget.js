@@ -6,7 +6,7 @@ const ImageWidget = ({updateImageWidget,widget}) =>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label">Image URL</label>
             <div className="col-sm-10">
-                <input className="form-control" placeholder="Some URL" id={widget.id+'-src'} required="" value={widget.src} onChange={()=>updateImageWidget(widget)}/>
+                <input className="form-control" placeholder="Image URL" id={widget.id+'-src'} required="" value={widget.src} onChange={()=>updateImageWidget(widget)}/>
             </div>
         </div>
         <div className="form-group row">

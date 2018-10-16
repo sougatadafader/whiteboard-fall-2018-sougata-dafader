@@ -161,7 +161,7 @@ class WidgetList extends Component {
                     id: (new Date()).getTime() + '_wid',
                     type: 'HEADING',
                     size: 1,
-                    text: 'The Document'
+                    text: ''
                 })}><i className="fa fa-plus"></i></button>
             </div>
 
