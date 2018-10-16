@@ -1,6 +1,8 @@
 import React from 'react'
 import TopicPill from "./TopicPill";
 
+
+
 const TopicPills = ({topics, selectTopic, selectedTopic,deleteTopic,editTopic,addTopic, findWidgets,createWidget}) =>
     <div className="topics mt-4">
         <ul className="nav nav-pills">
@@ -21,6 +23,7 @@ const TopicPills = ({topics, selectTopic, selectedTopic,deleteTopic,editTopic,ad
             <button className="btn btn-primary" id="topic-add-btn" onClick={() => addTopic()}>Add Topic</button>
         </li>
         </ul>
+
         {/*<WidgetList widgets={findWidgets(selectedTopic)}
                     createWidget = {createWidget}/>
         <button className="btn btn-danger pull-right m-4" id="add-widget" onClick={() => createWidget(selectedTopic,{

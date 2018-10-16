@@ -45,6 +45,7 @@ export default class CourseEditor extends Component {
             isLessonEdit:false,
             isTopicEdit:false
         }
+        console.log(course)
     }
     addLesson = () => {
 
@@ -251,10 +252,7 @@ export default class CourseEditor extends Component {
         document.getElementById('lesson-add').value = lesson.title
         document.getElementById('lesson-add-btn').innerHTML = 'Update Lesson'
     }
-    selectTopic = (topic) =>
-    {
 
-    }
     editTopic = (topic) =>
     {
         document.getElementById('topic-add').value = topic.title
@@ -277,12 +275,15 @@ export default class CourseEditor extends Component {
     }
     deleteTopic = (topic) =>
     {
+
         let course = this.state.course
+        console.log(course)
         let modules = course.modules
         let selectedModule = this.state.selectedModule
         let lessons = selectedModule.lessons
         let selectedLesson = this.state.selectedLesson
         let modPtr = 0
+
         for(let m in modules)
         {
             if(modules[m].id == selectedModule.id)
@@ -302,7 +303,6 @@ export default class CourseEditor extends Component {
         }
         let topicPtr = 0
         let topics = course.modules[modPtr].lessons[lessonPtr].topics
-        console.log(topics)
         for(let t in topics)
         {
             if(topics[t].id == topic.id)
@@ -312,9 +312,16 @@ export default class CourseEditor extends Component {
             }
         }
         topics.splice(topicPtr,1)
+        this.setState(
+            {
+                course
+            }
+        )
+        console.log(course)
     }
     addTopic = () =>
     {
+
         let course = this.state.course
         let modules = course.modules
         let selectedModule = this.state.selectedModule

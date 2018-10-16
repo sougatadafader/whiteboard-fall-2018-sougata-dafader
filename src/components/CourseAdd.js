@@ -40,7 +40,7 @@ export default class CourseAdd extends Component {
                                                         id: (new Date()).getTime() + '_wid',
                                                         type: "HEADING",
                                                         name:'',
-                                                        size: 4,
+                                                        size: 1,
                                                         text: "The Document Object Model"
                                                     }
                                                     ]
